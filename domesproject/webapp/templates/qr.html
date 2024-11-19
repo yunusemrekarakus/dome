@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMSUN DOMES BUNGALOV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffc107;
+            color: #333;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ffb300;
+        }
+        .icon {
+            margin-right: 10px;
+        }
+        .iban-container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+        }
+        .iban {
+            background-color: #ffc107;
+            padding: 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-top: 5px;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo alanı -->
+    <h1 style="text-align: center;">SAMSUN DOMES BUNGALOV</h1>
+
+    <div class="button-container">
+        <a href="https://g.page/r/CfZ8Lh83T2GdEBM/review" target="_blank" class="button">
+            <span class="icon"><i class="fab fa-google"></i></span> Google
+        </a>
+        <a href="https://www.instagram.com/samsun_domes_bungalov" target="_blank" class="button">
+            <span class="icon"><i class="fab fa-instagram"></i></span> Instagram
+        </a>
+        <a href="https://wa.me/+905524225555" target="_blank" class="button">
+            <span class="icon"><i class="fab fa-whatsapp"></i></span> WhatsApp
+        </a>
+        <!-- <a href="https://www.facebook.com" target="_blank" class="button">
+            <span class="icon"><i class="fab fa-facebook"></i></span> Facebook
+        </a> -->
+        <!-- <a href="https://www.tiktok.com/@atakumbungalovevleri" target="_blank" class="button">
+            <span class="icon"><i class="fab fa-tiktok"></i></span> TikTok
+        </a> -->
+        <!-- <a href="https://www.youtube.com" target="_blank" class="button">
+            <span class="icon"><i class="fab fa-youtube"></i></span> YouTube
+        </a> -->
+    </div>
+
+    <div class="iban-container" onclick="copyIban()">
+        <p>Ödeme için IBAN'ı kopyalayınız.</p>
+        <div class="iban" >SAMSUN DOMES BUNGALOV
+            <div class="iban" id="iban">TR00 0000 0000 0000 0000 0000 00
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyIban() {
+            const ibanText = document.getElementById("iban").innerText;
+            navigator.clipboard.writeText(ibanText).then(() => {
+                alert("IBAN kopyalandı: " + ibanText);
+            }).catch(err => {
+                alert("Kopyalama başarısız oldu, lütfen tekrar deneyin.");
+                console.error("Kopyalama hatası:", err);
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+
